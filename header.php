@@ -25,6 +25,7 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'cpa' ); ?></a>
 
 	<header id="masthead" class="site-header">
+	<h1>🖕</h1>
 		<div class="site-branding">
 			<?php
 			the_custom_logo();

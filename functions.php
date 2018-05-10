@@ -165,3 +165,17 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
+
+/**
+ * Register custom menus
+ */
+
+function register_cpa_menus() {
+  register_nav_menus(
+    array(
+      'social-media-menu' => __( 'Social Media Menu' ),
+      'footer-menu' => __( 'Footer Menu' )
+    )
+  );
+}
+add_action( 'init', 'register_cpa_menus' );
