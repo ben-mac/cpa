@@ -18,7 +18,28 @@ get_header();
 
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+		<main id="main" class="site-main container">
+			<div class="row">
+				<div class="col-sm-12 col-md-8">
+			<?php  //add me in
+//Fields
+//slider_portfolio = Gallery Field
+$images = get_field('homepage_slider');
+if( $images ): ?>
+   <div class="slider-for">
+        
+            <?php foreach( $images as $image ): ?>
+                <div class="slick-container">
+                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                    
+                </div>
+            <?php endforeach; ?>
+    </div>
+   <div class="slider-nav">
+    </div>
+<?php endif; ?>
+</div>
+</div>
 
 		<?php
 		while ( have_posts() ) :

@@ -124,9 +124,13 @@ function cpa_scripts() {
 
 	wp_enqueue_style( 'cpa-google-fonts', 'https://fonts.googleapis.com/css?family=Asul|Lato', false );
 
-	wp_enqueue_script( 'cpa-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_style( 'slickcss', get_stylesheet_directory_uri() . '/css/slick.css', '1.6.0', 'all');
+
+	wp_enqueue_script( 'slickjs', get_template_directory_uri() . '/js/slick.min.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'cpa-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+
+	wp_enqueue_script( 'cpa-scripts', get_template_directory_uri() . '/js/cpa-scripts.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
