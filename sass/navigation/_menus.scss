@@ -105,3 +105,14 @@
 		width: 50%;
 	}
 }
+
+.social-media-menu {
+	.menu-item {
+		display: inline-block;
+		font-size: 2.5rem;
+	}
+
+	.facebook {
+		background-color: $facebook;
+	}
+}
