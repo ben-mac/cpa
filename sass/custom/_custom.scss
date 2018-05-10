@@ -1,0 +1,115 @@
+////////
+// CPA THEME //
+//////
+
+////////
+//
+// GLOBAL
+//
+//////
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+////////
+//
+// HEADER
+//
+//////
+.site-header {
+	background-color: $white;
+
+	&--content {
+		width: 90%;
+		max-width: 1200px;
+		margin: auto;
+		display: flex;
+		align-items: center;
+		padding: 15px;
+	}
+
+	.header-nav {
+		margin-left: auto;
+		width: 50%;
+
+		ul {
+			margin: 0;
+			display: flex;
+			justify-content: space-evenly;
+		}
+	}
+}
+
+.header-menu {
+	font-family: 'Lato', sans-serif;
+
+	li {
+		display: inline-block;
+		color: $soft-grey;
+
+		a {
+			color: inherit;
+		}
+	}
+}
+
+.main-navigation {
+	background-color: $red;
+  color: $white;
+  
+  &--content {
+    padding: 0 35px;
+  }
+
+	a {
+		color:  inherit;
+	}
+}
+
+.site-branding {
+	width: 25%;
+}
+
+////////
+//
+// CONTENT
+//
+//////
+.site-content {
+	background-color: $white;
+	width: 90%;
+	max-width: 1200px;
+	margin: auto;
+}
+
+////////
+//
+// FOOTER
+//
+//////
+.site-footer {
+	background-color: $red;
+	color: $white;
+	width: 90%;
+	max-width: 1200px;
+	margin: auto;	
+
+	a {
+		color: inherit;
+	}
+}
+
+
+.social-media-menu {
+	.menu-item {
+		display: inline-block;
+		font-size: 2.5rem;
+	}
+
+	.facebook {
+		background-color: $facebook;
+	}
+}
+
+
+

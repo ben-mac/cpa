@@ -31,24 +31,3 @@ figure {
 }
 
 @import "tables";
-
-.site-footer {
-	background-color: $red;
-	color: $white;
-	width: 90%;
-	max-width: 1200px;
-	margin: auto;	
-
-	a {
-		color: inherit;
-	}
-
-	
-}
-
-.site-content {
-	background-color: $white;
-	width: 90%;
-	max-width: 1200px;
-	margin: auto;	
-}
