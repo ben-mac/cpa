@@ -11,6 +11,50 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
+
+// Grid System
+@import "grid";
+
+//Social Media menu
+.social-media-menu {
+  ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+  }
+
+	.menu-item {
+		display: inline-block;
+    font-size: 2.5rem;
+    border-radius: 50%;
+    width: 60px; 
+    height: 60px;
+    text-align: center;
+    line-height: 1.5;
+  }
+  
+  a {
+    color: $white;
+  }
+
+	.facebook {
+		background-color: $facebook;
+  }
+
+  .twitter {
+    background-color: $twitter;
+  }
+  
+  .linkedin {
+    background-color: $linkedin;
+  }
+
+  .youtube {
+    background-color: $youtube;
+  }
+}
+
 ////////
 //
 // HEADER
@@ -98,19 +142,3 @@ body {
 		color: inherit;
 	}
 }
-
-
-.social-media-menu {
-	.menu-item {
-		display: inline-block;
-		font-size: 2.5rem;
-	}
-
-	.facebook {
-		background-color: $facebook;
-	}
-}
-
-
-
-@import "grid";
