@@ -20,7 +20,7 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main container">
 			<div class="row">
-				<div class="col-sm-12 col-md-8">
+				<div class="col-sm-12 col-md-9">
 				<?php
 				$images = get_field('homepage_slider');
 				if( $images ): ?>
@@ -36,7 +36,7 @@ get_header();
 					</div>
 				<?php endif; ?>
 			</div>
-			<div class="col-sm-12 col-md-4">
+			<div class="col-sm-12 col-md-3">
 			<?php
 				// check if the repeater field has rows of data
 				if( have_rows('cta') ):
