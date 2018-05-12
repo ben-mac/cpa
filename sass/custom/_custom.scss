@@ -16,6 +16,10 @@ img {
 	width: 100%;
 }
 
+.slick-container {
+	height: 340px;
+}
+
 // Grid System
 @import "grid";
 
@@ -197,6 +201,50 @@ img {
 // PAGES
 //
 //////
+.home {
+	.hero {
+		padding: 13px 0;
+	}
+
+	.cta {
+		h2 {
+			font-weight: normal;
+		}
+		text-align: center;
+		border-bottom: 1px solid $red;
+		padding-bottom: 15px;
+
+		&:last-child {
+			border-bottom: none;
+		}
+
+		.btn {
+			border-radius: 10px;
+			background-color: $red;
+			letter-spacing: 1px;
+			color: $white;
+			padding: .3em 1em;
+			font-size: 16px;
+		}
+	}
+
+	.spotlight {
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		h2 {
+			font-weight: normal;
+			a {
+				color: inherit;
+			}
+		}
+	}
+
+}
+
 .landing-page {
 	padding-top: 40px;
 }

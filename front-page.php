@@ -19,7 +19,7 @@ get_header();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main container">
-			<div class="row">
+			<div class="row hero">
 				<div class="col-sm-12 col-md-9">
 				<?php
 				$images = get_field('homepage_slider');
@@ -50,7 +50,7 @@ get_header();
 
 							if( $link ): ?>
 								
-								<a class="button" href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
+								<a class="btn" href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
 
 							<?php endif; ?>
 						</div>
@@ -94,7 +94,7 @@ get_header();
 							<?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
 									<?php setup_postdata($post); ?>
 									<li>
-											<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+											<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 											<?php the_excerpt(); ?>
 									</li>
 							<?php endforeach; ?>
