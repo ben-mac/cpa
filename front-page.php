@@ -27,7 +27,7 @@ get_header();
 					<div class="slider-for">
 						<?php foreach( $images as $image ): ?>
 								<div class="slick-container">
-								<p><?php echo $image['caption']; ?></p>
+								<h1><?php echo $image['caption']; ?></h1>
 									<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 								</div>
 						<?php endforeach; ?>
