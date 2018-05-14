@@ -13,26 +13,39 @@ get_header();
 ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main container landing-page">
-      <div class="row">
+		<main id="main" class="site-main landing-page">
+      <div class="row container">
         <div class="col-sm-12">
-        <?php
-				$images = get_field('landing_slider');
-				if( $images ): ?>
-					<div class="slider-for">
-						<?php foreach( $images as $image ): ?>
-								<div class="slick-container">
-								<h1><?php echo $image['caption']; ?></h1>
-									<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-								</div>
-						<?php endforeach; ?>
-					</div>
-					<div class="slider-nav">
-					</div>
-				<?php endif; ?>
+        <div class="slider-for">
+          <?php
+          if( have_rows('landing_slider') ):
+
+              while ( have_rows('landing_slider') ) : the_row();
+
+              $image = get_sub_field('slider_image');
+              ?>
+                <div class="slick-container">
+                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                    <h1><?php echo the_sub_field('slider_text'); ?></h1>
+                </div>
+            <?php
+              endwhile;
+
+          else :
+
+              // no rows found
+
+          endif;
+
+          ?>
+          </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row section-title">
+        <?php the_title( '<h2 class="section-title--text">', '</h2>' ); ?>
+
+      </div>
+      <div class="row container">
         <div class="col-sm-12 col-md-9">
           <?php
           while ( have_posts() ) :
