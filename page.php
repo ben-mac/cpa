@@ -33,10 +33,10 @@ get_header();
         <?php
 
           // check if the repeater field has rows of data
-          if( have_rows('landing_sidebar') ):
+          if( have_rows('sidebar') ):
 
             // loop through the rows of data
-              while ( have_rows('landing_sidebar') ) : the_row();
+              while ( have_rows('sidebar') ) : the_row();
 
                   // display a sub field value
                   //the_sub_field('sidebar_item');
