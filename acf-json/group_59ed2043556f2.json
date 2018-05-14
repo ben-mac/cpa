@@ -1,0 +1,98 @@
+{
+    "key": "group_59ed2043556f2",
+    "title": "Banner Ad",
+    "fields": [
+        {
+            "key": "field_59ed207f9f220",
+            "label": "Ad Image",
+            "name": "ad_image",
+            "type": "image",
+            "instructions": "Add image for advertisement. \r\n\r\nSidebar ad size = 300 x 300px\r\n\r\nBanner ad size = 728 x 92px",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "full",
+            "library": "all",
+            "min_width": 300,
+            "min_height": 92,
+            "min_size": "0.001",
+            "max_width": 1456,
+            "max_height": 600,
+            "max_size": 2,
+            "mime_types": "jpg, jpeg, png, tiff, gif"
+        },
+        {
+            "key": "field_59f9cd0b63752",
+            "label": "Image URL",
+            "name": "image_url",
+            "type": "url",
+            "instructions": "URL for banner ad",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_59f9d0b265fbe",
+            "label": "Banner Ad?",
+            "name": "banner_ad",
+            "type": "true_false",
+            "instructions": "Display as Sidebar or Banner Ad?",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "Banner Ad",
+            "ui_off_text": "Sidebar Ad"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "web_ad"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "permalink",
+        "the_content",
+        "excerpt",
+        "discussion",
+        "comments",
+        "revisions",
+        "slug",
+        "author",
+        "format",
+        "page_attributes",
+        "featured_image",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1526338479
+}

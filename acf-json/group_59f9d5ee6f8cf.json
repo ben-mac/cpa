@@ -1,0 +1,203 @@
+{
+    "key": "group_59f9d5ee6f8cf",
+    "title": "Abstracts",
+    "fields": [
+        {
+            "key": "field_5a1ec4ca0f0eb",
+            "label": "Project Title",
+            "name": "project_title",
+            "type": "text",
+            "instructions": "The title of your research project.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Project Title",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5a1ec55c0f0ec",
+            "label": "Project Description",
+            "name": "project_description",
+            "type": "textarea",
+            "instructions": "Brief description of your project (including project rationale and research questions).",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_5a1ec58e0f0ed",
+            "label": "Project Specifics",
+            "name": "project_specifics",
+            "type": "textarea",
+            "instructions": "Specifics regarding your desired study population and participant's obligation\/role as a study participant.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_5a1ec5cb0f0ee",
+            "label": "Study Location",
+            "name": "study_location",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5a1ec5eb0f0ef",
+            "label": "Study Website",
+            "name": "study_website",
+            "type": "url",
+            "instructions": "Link to the study's website (if applicable)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5a1ec6020f0f0",
+            "label": "Study Start Date",
+            "name": "study_start_date",
+            "type": "date_picker",
+            "instructions": "Start date of data collection",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "d\/m\/Y",
+            "return_format": "F j, Y",
+            "first_day": 0
+        },
+        {
+            "key": "field_5a1ec64d0f0f1",
+            "label": "Study End Date",
+            "name": "study_end_date",
+            "type": "date_picker",
+            "instructions": "End date of data collection",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "d\/m\/Y",
+            "return_format": "F j, Y",
+            "first_day": 0
+        },
+        {
+            "key": "field_5a1ec6700f0f2",
+            "label": "Project Lead",
+            "name": "project_lead",
+            "type": "textarea",
+            "instructions": "Lead(s) on project (Note: If you are a student submitting to the Portal, you must provide the name of your supervisor)",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_5a1ec6ac0f0f3",
+            "label": "REB Approval",
+            "name": "reb_approval",
+            "type": "file",
+            "instructions": "Evidence of REB approval is required.  Please upload a PDF of ethics approval.\r\n\r\nYou must show that at least one member of the research team is a student or full member of CPA.\r\n\r\nYou must have a psychologist on the research team.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "uploadedTo",
+            "min_size": "0.0001",
+            "max_size": 64,
+            "mime_types": "PDF,pdf"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "abstract"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "permalink",
+        "the_content",
+        "excerpt",
+        "discussion",
+        "comments",
+        "revisions",
+        "slug",
+        "author",
+        "format",
+        "page_attributes",
+        "featured_image",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1526338467
+}
