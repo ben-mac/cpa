@@ -16,21 +16,71 @@ get_header();
 ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+		<main id="main" class="site-main container">
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
+      <div class="row">
+        <div class="col-sm-12 col-md-9">
+          <?php
+          while ( have_posts() ) :
+            the_post();
+            // Default Content for page
+            get_template_part( 'template-parts/content', 'page' );
 
-			get_template_part( 'template-parts/content', 'page' );
+          endwhile; // End of the loop.
+          ?>
+        </div>
+        <div class="col-sm-12 col-md-3">
+        <?php
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+          // check if the repeater field has rows of data
+          if( have_rows('landing_sidebar') ):
 
-		endwhile; // End of the loop.
-		?>
+            // loop through the rows of data
+              while ( have_rows('landing_sidebar') ) : the_row();
+
+                  // display a sub field value
+                  //the_sub_field('sidebar_item');
+                
+                  ?>
+                  <?php $post_object = get_sub_field('sidebar_item'); ?>
+ 
+                  <?php if( $post_object ): ?>
+
+                      <?php $post = $post_object; setup_postdata( $post ); ?>
+                      
+                      <div class="sidebar-item">
+                        <?php if (has_post_thumbnail()): ?>
+                          <a href="<?php the_permalink(); ?>" class="sidebar-item--img">
+                            <?php the_post_thumbnail('thumbnail'); ?>
+                          </a>
+                        <?php endif; ?>
+
+                        <div class="sidebar-item--content">
+                          <h3><?php echo the_title(); ?></h3>
+
+                          <?php the_excerpt(); ?><span>
+                            <a href="<?php the_permalink(); ?>">Read more...</a>
+                          </span>
+                        </div>
+                      </div>
+
+                      <?php wp_reset_postdata(); ?>
+
+                  <?php endif; ?>
+
+
+             <?php endwhile;
+
+          else :
+
+              // no rows found
+
+          endif;
+
+          ?>       
+          <?php get_sidebar(); ?>
+        </div>
+      </div>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
