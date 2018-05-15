@@ -26,5 +26,10 @@ jQuery(document).ready(function($){
 
  $('.search-close').click(function() {
    $('.header-nav').toggleClass('show');
+ });
+
+ // Mobile Toggles
+ $('.mobile-toggle').click(function() {
+   $('.mobile-main-nav').slideToggle('slow');
  })
 });

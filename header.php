@@ -46,6 +46,7 @@
 			</div><!-- .site-branding -->
 
 			<nav class="header-nav">
+				<span class="mobile-toggle"><i class="fas fa-bars"></i></span>
 				<?php wp_nav_menu( array(
 					'theme_location' => 'header-menu', 
 					'container_class' => 'header-menu' 
@@ -61,6 +62,13 @@
 					<span class="search-close"><i class="fas fa-times"></i></span>
 					<?php get_search_form(); ?>
 			</nav>
+
+			<div class="mobile-main-nav">
+			<?php wp_nav_menu( array(
+					'theme_location' => 'header-menu', 
+					'container_class' => 'mobile-menu' 
+				) ); ?>
+			</div>
 
 		</div>
 	</header><!-- #masthead -->
