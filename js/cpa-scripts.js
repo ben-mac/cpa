@@ -21,7 +21,7 @@ jQuery(document).ready(function($){
  // Search Toggle
  $('.search-toggle').click(function() {
    $('.header-nav').toggleClass('show');
-   $('.search-form').slideDown('slow');
+   //$('.search-form').slideDown('slow');
  });
 
  $('.search-close').click(function() {

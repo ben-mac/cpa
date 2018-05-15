@@ -125,8 +125,27 @@ img {
 	display: none;
 }
 
+.search-form {
+
+}
+
+.search-results {
+	h1 {
+		margin-bottom: 40px;
+	}
+
+	article {
+		h2 {
+			a {
+				color: inherit;
+			}
+		}
+	}
+}
+
 .header-nav.show {
 	.search-form {
+		background-color: $white;
 		display: block;
     position: absolute;
     right: 0;
@@ -252,7 +271,6 @@ img {
 .site-footer {
 	background-color: $red;
 	color: $white;
-	width: 90%;
 	max-width: 1200px;
 	margin: auto;
 	padding: 45px 0 20px;
