@@ -50,6 +50,16 @@
 					'theme_location' => 'header-menu', 
 					'container_class' => 'header-menu' 
 				) ); ?>
+
+				<?php global $woocommerce; ?>
+					<div class="cart-wrap">
+					<a class="cart-icon" href="<?php echo $woocommerce->cart->get_cart_url(); ?>"
+					title="<?php _e('Cart View', 'woothemes'); ?>"><i class="fas fa-shopping-cart"></i>
+					</a>
+					</div>
+					<span class="search-toggle toggle"><i class="fas fa-search"></i></span>
+
+					<?php get_search_form(); ?>
 			</nav>
 
 		</div>
