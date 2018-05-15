@@ -57,8 +57,8 @@
 					title="<?php _e('Cart View', 'woothemes'); ?>"><i class="fas fa-shopping-cart"></i>
 					</a>
 					</div>
-					<span class="search-toggle toggle"><i class="fas fa-search"></i></span>
-
+					<span class="search-toggle"><i class="fas fa-search"></i></span>
+					<span class="search-close"><i class="fas fa-times"></i></span>
 					<?php get_search_form(); ?>
 			</nav>
 

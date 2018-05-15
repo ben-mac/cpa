@@ -121,8 +121,34 @@ img {
 }
 
 // Search
-.search-form {
+.search-form, .search-close {
 	display: none;
+}
+
+.header-nav.show {
+	.search-form {
+		display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+		width: 100%;
+		
+		input[type="search"] {
+			width: 90%
+		}
+		input[type="submit"] {
+			display: none;
+		}
+	}
+
+	.search-close {
+		display: block;
+		position: absolute;
+		right: 0;
+		top: 0;
+		cursor: pointer;
+		z-index: 100;
+	}
 }
 
 .search-toggle {
@@ -131,6 +157,7 @@ img {
 	top: 0;
 	transform: scaleX(-1);
 	color: $light-grey;
+	cursor: pointer;
 }
 
 .cart-wrap {

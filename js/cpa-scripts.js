@@ -1,4 +1,6 @@
 jQuery(document).ready(function($){
+
+  // Slick Slider settings
   $('.slider-for').slick({
    slidesToShow: 1,
    slidesToScroll: 1,
@@ -6,6 +8,7 @@ jQuery(document).ready(function($){
    fade: true,
    asNavFor: '.slider-nav'
  });
+
  $('.slider-nav').slick({
    slidesToScroll: 1,
    asNavFor: '.slider-for',
@@ -14,4 +17,14 @@ jQuery(document).ready(function($){
    arrows: true,
    autoplay: false
  });
+
+ // Search Toggle
+ $('.search-toggle').click(function() {
+   $('.header-nav').toggleClass('show');
+   $('.search-form').slideDown('slow');
+ });
+
+ $('.search-close').click(function() {
+   $('.header-nav').toggleClass('show');
+ })
 });
