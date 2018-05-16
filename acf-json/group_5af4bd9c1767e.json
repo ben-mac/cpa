@@ -6,8 +6,8 @@
             "key": "field_5af4c604288af",
             "label": "Homepage Slider",
             "name": "homepage_slider",
-            "type": "gallery",
-            "instructions": "Choose images for the slider, if only one image is chosen the slider will not be active",
+            "type": "repeater",
+            "instructions": "Choose images for the slider, if only one image is chosen the slider will not be active. Text will overlay the image",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -15,17 +15,56 @@
                 "class": "",
                 "id": ""
             },
-            "min": "",
-            "max": "",
-            "insert": "append",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add Image",
+            "sub_fields": [
+                {
+                    "key": "field_5afca0140e28b",
+                    "label": "Slider Image",
+                    "name": "slider_image",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_5afca02d0e28c",
+                    "label": "Slider Text",
+                    "name": "slider_text",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
         },
         {
             "key": "field_5af4cd316aa1e",
@@ -127,5 +166,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1526338492
+    "modified": 1526505560
 }

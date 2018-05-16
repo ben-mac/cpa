@@ -21,21 +21,30 @@ get_header();
 		<main id="main" class="site-main container">
 			<div class="row hero">
 				<div class="col-sm-12 col-md-9">
-				<?php
-				$images = get_field('homepage_slider');
-				if( $images ): ?>
-					<div class="slider-for">
-						<?php foreach( $images as $image ): ?>
-								<div class="slick-container">
-								<h1><?php echo $image['caption']; ?></h1>
-									<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-								</div>
-						<?php endforeach; ?>
+			<div class="slider-for">
+          <?php
+          if( have_rows('homepage_slider') ):
+
+              while ( have_rows('homepage_slider') ) : the_row();
+
+              $image = get_sub_field('slider_image');
+              ?>
+                <div class="slick-container">
+                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                    <h1><?php echo the_sub_field('slider_text'); ?></h1>
+                </div>
+            <?php
+              endwhile;
+
+          else :
+
+              // no rows found
+
+          endif;
+
+          ?>
 					</div>
-					<div class="slider-nav">
 					</div>
-				<?php endif; ?>
-			</div>
 			<div class="col-sm-12 col-md-3">
 			<?php
 				// check if the repeater field has rows of data
