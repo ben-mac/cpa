@@ -21,7 +21,6 @@ jQuery(document).ready(function($){
  // Search Toggle
  $('.search-toggle').click(function() {
    $('.header-nav').toggleClass('show');
-   //$('.search-form').slideDown('slow');
  });
 
  $('.search-close').click(function() {
@@ -31,5 +30,9 @@ jQuery(document).ready(function($){
  // Mobile Toggles
  $('.mobile-toggle').click(function() {
    $('.mobile-main-nav').slideToggle('slow');
- })
+ });
+
+ $('.mobile-toggle__content').click(function() {
+    $('.main-navigation ul').slideToggle('slow');
+ });
 });
