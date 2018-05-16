@@ -34,10 +34,10 @@ img {
 
 	.menu-item {
 		display: inline-block;
-    font-size: 2.5rem;
+    font-size: 2rem;
     border-radius: 50%;
-    width: 60px; 
-    height: 60px;
+    width: 50px; 
+    height: 50px;
     text-align: center;
     line-height: 1.5;
   }
@@ -137,7 +137,8 @@ img {
 	transition: all $time;
 	
 	input[type="search"] {
-		width: 90%
+		width: 90%;
+		border: none;
 	}
 	input[type="submit"] {
 		display: none;
