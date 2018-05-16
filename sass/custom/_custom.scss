@@ -335,6 +335,22 @@ img {
 	.section-title {
 		margin-left: -35px;
 		margin-right: -35px;
+
+		&.spotlight {
+			margin-right: -17px;
+			margin-top: 17px;
+		}
+	}
+
+	.widget-title {
+		background-color: $red;
+		color: $white;
+		padding: 10px;
+		font-size: 20px;
+	}
+
+	.widget-area > .widget:first-child .widget-title {
+		margin-right: -35px;
 	}
 
 	.entry-title {

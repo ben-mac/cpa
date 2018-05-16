@@ -82,21 +82,20 @@ get_header();
 				</div>
 			</div>
 		</div>
-
-		<div class="row section-title">
-			<h2 class="section-title--text"><?php echo 'Spotlight'; ?></h2>
-		</div>
 		<div class="row">
 			<div class="col-sm-12 col-md-9">
-			<?php
-			while ( have_posts() ) :
-				the_post();
+				<div class="section-title spotlight">
+					<h2 class="section-title--text"><?php echo 'Spotlight'; ?></h2>
+				</div>
+				<?php
+				while ( have_posts() ) :
+					the_post();
 
-				// Default post content for page
-				get_template_part( 'template-parts/content', 'page' );
+					// Default post content for page
+					get_template_part( 'template-parts/content', 'page' );
 
-			endwhile; // End of the loop.
-			?>
+				endwhile; // End of the loop.
+				?>
 
 				<div class="spotlight">
 					<?php $catquery = new WP_Query( 'cat=2&posts_per_page=6' ); ?>
