@@ -120,33 +120,6 @@
                     "return_format": "array"
                 }
             ]
-        },
-        {
-            "key": "field_5af516a282d5b",
-            "label": "Spotlight",
-            "name": "spotlight",
-            "type": "relationship",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "post_type": [],
-            "taxonomy": [
-                "category:spotlight"
-            ],
-            "filters": [
-                "search",
-                "post_type",
-                "taxonomy"
-            ],
-            "elements": "",
-            "min": "",
-            "max": 6,
-            "return_format": "object"
         }
     ],
     "location": [
@@ -166,5 +139,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1526505560
+    "modified": 1526507076
 }

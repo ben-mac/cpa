@@ -21,30 +21,30 @@ get_header();
 		<main id="main" class="site-main container">
 			<div class="row hero">
 				<div class="col-sm-12 col-md-9">
-			<div class="slider-for">
-          <?php
-          if( have_rows('homepage_slider') ):
+					<div class="slider-for">
+						<?php
+						if( have_rows('homepage_slider') ):
 
-              while ( have_rows('homepage_slider') ) : the_row();
+								while ( have_rows('homepage_slider') ) : the_row();
 
-              $image = get_sub_field('slider_image');
-              ?>
-                <div class="slick-container">
-                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-                    <h1><?php echo the_sub_field('slider_text'); ?></h1>
-                </div>
-            <?php
-              endwhile;
+								$image = get_sub_field('slider_image');
+								?>
+									<div class="slick-container">
+											<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+											<h1><?php echo the_sub_field('slider_text'); ?></h1>
+									</div>
+							<?php
+								endwhile;
 
-          else :
+						else :
 
-              // no rows found
+								// no rows found
 
-          endif;
+						endif;
 
-          ?>
+						?>
 					</div>
-					</div>
+				</div>
 			<div class="col-sm-12 col-md-3">
 			<?php
 				// check if the repeater field has rows of data
@@ -99,20 +99,17 @@ get_header();
 			?>
 
 				<div class="spotlight">
-				<?php 
-					$posts = get_field('spotlight');
-					if( $posts ): ?>
-							<ul>
-							<?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
-									<?php setup_postdata($post); ?>
-									<li>
-											<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-											<?php the_excerpt(); ?>
-									</li>
-							<?php endforeach; ?>
-							</ul>
-							<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
-					<?php endif; ?>
+					<?php $catquery = new WP_Query( 'cat=2&posts_per_page=6' ); ?>
+						<ul>
+						<?php while($catquery->have_posts()) : $catquery->the_post(); ?>
+							<li><h2><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+								<ul>
+									<li><?php the_excerpt(); ?></li>
+								</ul>
+							</li>
+						<?php endwhile; ?> 
+						</ul>
+					<?php wp_reset_postdata(); ?>
 				</div>
 			</div>
 			<div class="col-sm-12 col-md-4">
