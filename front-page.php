@@ -84,10 +84,10 @@ get_header();
 		</div>
 
 		<div class="row section-title">
-			<?php the_title( '<h2 class="section-title--text">', '</h2>' ); ?>
+			<h2 class="section-title--text"><?php echo 'Spotlight'; ?></h2>
 		</div>
 		<div class="row">
-			<div class="col-sm-12 col-md-8">
+			<div class="col-sm-12 col-md-9">
 			<?php
 			while ( have_posts() ) :
 				the_post();
@@ -112,7 +112,7 @@ get_header();
 					<?php wp_reset_postdata(); ?>
 				</div>
 			</div>
-			<div class="col-sm-12 col-md-4">
+			<div class="col-sm-12 col-md-3">
 				<?php	get_sidebar(); ?>
 			</div>
 		</div>
