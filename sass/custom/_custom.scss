@@ -70,6 +70,10 @@ img {
 //////
 .site-header {
 	background-color: $white;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 100;
 
 	&--content {
 		width: 90%;
@@ -210,6 +214,7 @@ img {
 	width: 90%;
 	max-width: 1200px;
 	margin: auto;
+	padding-top: 130px;
 }
 
 .slick-container {
@@ -437,6 +442,14 @@ img {
 }
 
 @media all and (max-width: 980px) {
+	.site-header {
+		position: static;
+	}
+
+	.site-content {
+		padding-top: 0;
+	}
+
 	.site-header--content {
 		height: 80px;
 	}
