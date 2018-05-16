@@ -43,7 +43,6 @@ get_header();
       </div>
       <div class="row section-title">
         <?php the_title( '<h2 class="section-title--text">', '</h2>' ); ?>
-
       </div>
       <div class="row container">
         <div class="col-sm-12 col-md-9">

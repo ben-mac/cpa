@@ -74,6 +74,9 @@ get_header();
 			</div>
 		</div>
 
+		<div class="row section-title">
+			<?php the_title( '<h2 class="section-title--text">', '</h2>' ); ?>
+		</div>
 		<div class="row">
 			<div class="col-sm-12 col-md-8">
 			<?php
@@ -109,24 +112,26 @@ get_header();
 		</div>
 		<div class="row">
 			<div class="col-sm-12">
-
-					<ul class="products">
-	<?php
-		$args = array(
-			'post_type' => 'product',
-			'posts_per_page' => 12
-			);
-		$loop = new WP_Query( $args );
-		if ( $loop->have_posts() ) {
-			while ( $loop->have_posts() ) : $loop->the_post();
-				wc_get_template_part( 'content', 'product' );
-			endwhile;
-		} else {
-			echo __( 'No products found' );
-		}
-		wp_reset_postdata();
-	?>
-</ul><!--/.products-->
+				<div class="row section-title">
+				<h2 class="section-title--text"><?php echo 'Featured Activities and Products'; ?></h2>
+				</div>
+				<ul class="products">
+				<?php
+					$args = array(
+						'post_type' => 'product',
+						'posts_per_page' => 12
+						);
+					$loop = new WP_Query( $args );
+					if ( $loop->have_posts() ) {
+						while ( $loop->have_posts() ) : $loop->the_post();
+							wc_get_template_part( 'content', 'product' );
+						endwhile;
+					} else {
+						echo __( 'No products found' );
+					}
+					wp_reset_postdata();
+				?>
+			</ul><!--/.products-->
 			</div>
 		</div>
 		

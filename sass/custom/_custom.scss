@@ -222,6 +222,8 @@ img {
 		z-index: 100;
 		color: $white;
 		font-weight: 300;
+		line-height: 1em;
+		margin-top: 0;
 		text-shadow: 0 1px 3px rgba(0,0,0,.3);
 	}
 
@@ -317,6 +319,19 @@ img {
 .home {
 	.hero {
 		padding: 13px 0;
+
+		h1 {
+			font-size: 46px;
+		}
+	}
+
+	.section-title {
+		margin-left: -35px;
+		margin-right: -35px;
+	}
+
+	.entry-title {
+		display: none;
 	}
 
 	.cta {
@@ -390,6 +405,24 @@ img {
 
 	h3 {
 		margin-top: 0;
+	}
+}
+
+////////
+//
+// MISC
+//
+//////
+
+.textwidget {
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	a {
+		color: inherit;
 	}
 }
 
