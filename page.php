@@ -58,7 +58,8 @@ get_header();
                         <div class="sidebar-item--content">
                           <h3><?php echo the_title(); ?></h3>
 
-                          <?php the_excerpt(); ?><span>
+                          <?php the_excerpt(); ?>
+                          <span>
                             <a href="<?php the_permalink(); ?>">Read more...</a>
                           </span>
                         </div>

@@ -188,3 +188,5 @@ function register_cpa_menus() {
 add_action( 'init', 'register_cpa_menus' );
 
 add_filter( 'widget_text', 'do_shortcode' );
+
+add_post_type_support( 'page', 'excerpt' );
