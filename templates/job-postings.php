@@ -25,31 +25,53 @@ get_header();
           ?>
 					</div> <!-- .entry-content -->
 
+						<table>
+							<thead>
+								<tr>
+									<td>Employer</td>
+									<td>Location</td>
+									<td>Position</td>
+									<td>Website</td>
+								</tr>
+								</thead>
+								<tbody>
+
 
 				<?php 
 				  $temp = $wp_query; 
 				  $wp_query = null; 
 				  $wp_query = new WP_Query(); 
-				  $wp_query->query('showposts=5&post_type=job_posting'.'&paged='.$paged); 
+				  $wp_query->query('post_type=job_posting'); 
 
 				  while ($wp_query->have_posts()) : $wp_query->the_post(); 
 				?>
 
-						<div class="item-job-posting">
-							<a href="<?php echo get_permalink(); ?>"><h3 class="title"><?php the_field('job_title'); ?></h3></a>
-							<p><strong>Employer: </strong> <?php the_field('organization'); ?></p>
-							<p><strong>Location: </strong> <?php the_field('location'); ?></p>
-							<p><strong>Closing Date: </strong><?php the_field('job_closing_date'); ?></p>
-							<p> <a target="_blank" href="<?php the_field('job_description'); ?>" >Job Description</a></p>
-							<p><a target="_blank" href="<?php the_field('job_url'); ?>">Website</a></p>
-						</div>		  
+						<!-- <div class="item-job-posting">
+							<a href="<?php //echo get_permalink(); ?>"><h3 class="title"><?php //the_field('job_title'); ?></h3></a>
+							<p><strong>Employer: </strong> <?php //the_field('organization'); ?></p>
+							<p><strong>Location: </strong> <?php //the_field('location'); ?></p>
+							<p><strong>Closing Date: </strong><?php //the_field('job_closing_date'); ?></p>
+							<p> <a target="_blank" href="<?php //the_field('job_description'); ?>" >Job Description</a></p>
+							<p><a target="_blank" href="<?php //the_field('job_url'); ?>">Website</a></p>
+						</div> -->
+						
+								<tr>
+									<td><?php the_field('organization'); ?></td>
+									<td><?php the_field('location'); ?></td>
+									<td><a target="_blank" href="<?php the_field('job_description'); ?>" ><?php the_field('job_title'); ?></a></td>
+									<td><a target="_blank" href="<?php the_field('job_url'); ?>">More Info<i class="fas fa-external-link-alt"></i></a></td>
+								</tr>
 
 				<?php endwhile; ?>
 
-				<nav>
-				    <?php previous_posts_link('&laquo; Newer Job Postings') ?>
-				    <?php next_posts_link('Older Job Postings &raquo;') ?>
-				</nav>
+
+							</tbody>
+						</table>
+
+				<!-- <nav>
+				    <?php //previous_posts_link('&laquo; Newer Job Postings') ?>
+				    <?php //next_posts_link('Older Job Postings &raquo;') ?>
+				</nav> -->
 
 				<?php 
 				  $wp_query = null; 

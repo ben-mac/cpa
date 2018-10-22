@@ -20,6 +20,39 @@ img {
 	height: 340px;
 }
 
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	border: 1px solid #cbcbcb;
+	thead {
+		background-color: #e2e2e2;
+
+		td {
+			font-weight: bold;
+		}
+	}
+
+	td {
+		padding: 8px;
+		border-left: 1px solid #cbcbcb;
+		border-bottom: 1px solid #cbcbcb;
+		max-width: 250px;
+
+		.svg-inline--fa {
+			margin-left: 5px;
+			font-size: 12px;
+		}
+
+		a {
+			color: $soft-grey;
+
+			&:hover {
+				color: #666;
+			}
+		}
+	}
+}
+
 // Import Grid System
 @import "grid";
 
