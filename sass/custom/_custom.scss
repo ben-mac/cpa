@@ -86,12 +86,7 @@ table {
   }
 
   .twitter {
-		display: none;
 		background-color: $twitter;
-		
-		.home & {
-			display: inline-block;
-		}
   }
   
   .linkedin {
