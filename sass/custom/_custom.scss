@@ -18,6 +18,10 @@ img {
 
 .slick-container {
 	height: 340px;
+ 
+	@media all and (max-width: 769px) {
+		height: auto;
+	}
 }
 
 table {
@@ -267,6 +271,7 @@ table {
 		line-height: 1em;
 		margin-top: 0;
 		text-shadow: 0 1px 3px rgba(0,0,0,.3);
+		background: rgba(176,45,38, 0.8);
 	}
 
 	img {
@@ -364,6 +369,7 @@ table {
 
 		h1 {
 			font-size: 46px;
+
 		}
 	}
 
@@ -604,5 +610,10 @@ table {
 				text-align: left;
 			}
 		}
+	}
+}
+@media all and (max-width: 660px) {
+	.home .hero h1 {
+		font-size: 22px;
 	}
 }

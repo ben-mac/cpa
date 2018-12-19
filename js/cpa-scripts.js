@@ -1,22 +1,17 @@
 jQuery(document).ready(function($){
 
   // Slick Slider settings
-  $('.slider-for').slick({
-   slidesToShow: 1,
-   slidesToScroll: 1,
-   arrows: true,
-   fade: true,
-   asNavFor: '.slider-nav'
- });
-
- $('.slider-nav').slick({
-   slidesToScroll: 1,
-   asNavFor: '.slider-for',
-   dots: true,
-   focusOnSelect: true,
-   arrows: true,
-   autoplay: false
- });
+$('.slider-for').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: false,
+  responsive: [
+    { 
+      breakpoint: 769,
+      settings: 'unslick'
+    }
+  ]
+});
 
  // Search Toggle
  $('.search-toggle').click(function() {
