@@ -20,7 +20,7 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main container">
 			<div class="row hero">
-				<div class="col-sm-12 col-md-9">
+				<div class="col-sm-12 col-md-9 slider">
 					<div class="slider-for">
 						<?php
 						if( have_rows('homepage_slider') ):
@@ -43,6 +43,10 @@ get_header();
 						endif;
 
 						?>
+					</div>
+					<div class="controls">
+						<button class="prev"><i class="fas fa-arrow-left"></i></button>
+						<button class="next"><i class="fas fa-arrow-right"></i></button>
 					</div>
 				</div>
 			<div class="col-sm-12 col-md-3">

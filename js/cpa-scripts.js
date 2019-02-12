@@ -5,12 +5,8 @@ $('.slider-for').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
   autoplay: false,
-  responsive: [
-    { 
-      breakpoint: 769,
-      settings: 'unslick'
-    }
-  ]
+  prevArrow: $('.prev'),
+  nextArrow: $('.next'),
 });
 
  // Search Toggle
